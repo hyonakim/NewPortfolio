@@ -1,0 +1,525 @@
+// Put any @imports here
+// See Readme for a list of supported ones
+@import "foundation";
+@include foundation-everything;
+@include foundation-flex-grid;
+@import 'bourbon';
+@import 'neat';
+@import 'font-awesome';
+@import 'motion-ui';
+
+/// Portfolio Colors ///
+$redOrange: #FF4734;
+$blackPearl: #1E2B2F;
+$blackRussian: #24282A;
+$blueHalfBaked: #8FBEC8;
+$grayOyster: #D4EBF0;
+$grayLight: #E6E6E6;
+$grayAztec: #161D1E;
+$grayIron: #CBCBCB;
+$whiteSmoke: #F6F6F6;
+
+
+// Porfolio Fonts //
+$workSans: 'Work Sans', sans-serif;
+
+
+
+
+body {
+  background: $whiteSmoke;
+
+///// Landing Page /////
+  
+  .homeBg {
+    position: relative;
+  }
+
+  .logo {
+  position: absolute;
+  top: 3%;
+  left: 10px;
+  width: 150px;
+  }
+
+  .homeMenu {
+  position: absolute;
+  top: 3%;
+  left: 420px;
+
+    li a {
+      color: #fff;
+      margin-right: 25px;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social {
+    position: absolute;
+    top: 3%;
+    right: 10px;
+
+    .fa {
+      color: $redOrange;
+      margin-right: 25px;
+      transition: all 0.25s ease-out;
+    }
+
+    .fa:hover {
+      color: #fff;
+      transition: all 0.25s ease-out;
+    }
+  }
+
+  .container {
+
+    .myName {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    }
+
+    .homeBtns {
+      position: absolute;
+      top: 440px;
+      left: 490px;
+
+      .contactBtn,
+      .portfolioBtn {
+        color: #fff;
+        padding: 10px 20px;
+        margin-right: 25px;
+        border: 2px solid $redOrange;
+      }
+    }
+  }
+
+///// About Section /////
+
+  .about {
+    margin-top: 10%;
+    width: 100%;
+    height: 441px;
+    // border: 2px dashed black;
+
+    .myPicDiv {
+      float: left;
+      height: 40px;
+      width: 30%;
+      height: 400px;
+      margin-left: 10%;
+      // border: 1px solid $grayLight;
+
+      .myPic {
+      float: left;
+      width: 94%;
+      height: 380px;
+      margin: 2.5% 0 0 3%;
+      }
+    }
+
+    .bioBlock {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      height: 470px;
+      border: 1px solid $grayLight;
+      background: #fff;
+      position: absolute;
+      left: 38%;
+      top: 118%;
+      z-index: -999;
+
+      .para1 {
+        padding: 5%;
+      }
+
+      h5 {
+        padding: 0 5%;
+        font-weight: bold;
+      }
+
+      .para2 {
+        padding: 0 5%;
+      }
+    }
+
+    .skills {
+      width: 80%;
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 195%;
+      margin-left: 7%;
+
+      h5 {
+        margin-left: 7%;
+        font-weight: bold;
+      }
+
+      img {
+        width: 8%;
+        height: 8%;
+        margin-top: 2%;
+        margin-left: 8%;
+      }
+
+      .second {
+        margin-top: 5%;
+      }
+    }
+  }
+
+///// Portfolio Section /////
+
+  .portfolio {
+    margin-top: 40%;
+    width: 100%;
+    height: 688px;
+    background: url('../images/citybg.png');
+
+    h3 {
+      text-align: center;
+      color: #fff;
+      padding-top: 8%;
+    }
+
+    .myWorks {
+      margin-left: 18%;
+
+      .projects,
+      .graphics {
+        float: left;  
+
+        small {
+          display: block;
+          margin-left: 30%;
+          color: #fff;
+        } 
+      }
+
+      .projects img:hover,
+      .graphics img:hover {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        transition: all 1.5s linear;
+      }
+    }
+  }
+
+///// Contact Section /////  
+
+  .contact {
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+    .contactForm {
+      width: 80%;
+      // border: 1px solid red;
+      margin-left: 10%;
+
+      h3 {
+        text-align: center;
+        margin-bottom: 5%;
+      }
+
+      .input1 {
+        width: 43%;
+        margin-right: 0;
+        margin-left: 2%;
+        float: left;
+      }
+
+      .inputLeft {
+        margin-top: 6px;
+      }
+
+      .input2 {
+        width: 50%;
+        float: right;
+        margin-right: 3%;
+      }
+
+      .button {
+        margin-top: 20%;
+        margin-left: -43%;
+        background: $redOrange;
+        transition: 1s;
+      }
+
+      .button:hover {
+        background: $grayAztec;
+        transition: 1s;
+      }
+    }
+  }
+
+///// Footer Section /////
+
+  footer {
+    background: $blackRussian;
+    height: 100%;
+
+    .footerInfo {
+      padding-top: 2%;
+      padding-left: 2%;
+      padding-right: 2%;
+      height: 50%;
+      display: flex;
+      // border: 1px solid red;
+      justify-content: space-between;
+
+      .contactMe {
+        margin-top: 2%;
+
+        a {
+          color: $redOrange;
+        }
+
+        h5 {
+          color: #fff;
+          // background: $redOrange;
+          border: none;
+          border-radius: 5px;
+          width: 75%;
+          // text-align: center;
+        }
+
+        hr {
+          margin-top: 0;
+          border: 0;
+          border-top: 1px solid $redOrange;
+        }
+
+        p {
+          color: #fff;
+          margin: 0 auto;
+        }
+      }
+
+      .socialFooter {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        // border: 1px solid blue;
+        width: 19%;
+        height: 40px;
+        margin-top: 2%;
+        margin-left: 4%;
+
+        .fa {
+          color: $redOrange;
+          margin-right: 25px;
+          transition: all 0.25s ease-out;
+        }
+
+        .fa:hover {
+          color: #fff;
+          transition: all 0.25s ease-out;
+        }
+
+        .followMe {
+          width: 60%;
+          color: #fff;
+          text-align: center;
+          margin-left: 12%;
+          margin-top: 4%;
+        }
+
+        hr {
+          border: 0;
+          border-top: 1px solid $grayAztec;
+        }
+      }
+
+      .footerLogo {
+        width: 15%;
+      }
+    }
+
+    .copyright {
+      height: 75px;
+      background: $grayAztec;
+
+      p {
+        color: #fff;
+        text-align: center;
+        padding-top: 2%;
+      }
+
+      img {
+        width: 6%;
+        position: absolute;
+        top: 3220px;
+        left: 94%;
+      }
+
+      img:hover {
+        border: 1px solid $redOrange;
+        border-radius: 205px;
+      }
+    }
+  }
+
+/////////// Projects Page View /////////////
+
+  .projectsBg {
+    position: relative;
+    height: 678px;
+    width: 100%;
+  }
+
+  .bread {
+    position: absolute;
+    top: 2%;
+    margin-left: 1%;
+
+    a {
+      color: $redOrange;
+    }
+  }
+
+  h2 {
+    color: $redOrange;
+    padding-top: 5%;
+    font-family: $workSans;
+    font-weight: 200;
+    position: absolute;
+    top: 30%;
+    margin-left: 39.5%;
+    font-size: 5em;
+  }
+
+  .outer {
+    // height: 20px;
+
+    .workGallery {
+      position: absolute;
+      top: 80%;
+      height: 100px;
+      margin-left: 6%;
+      // margin-top: 5%;
+
+      .wrapper {
+        width: 18%;
+        height: 105%;
+        float: left;
+        margin-right: 1%;
+        // margin-left: 1%;
+        margin-bottom: 1%;
+        border: 1px solid $grayLight;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: transform 800ms;
+        }
+      }
+
+      .wrapper:hover {
+        border: 5px solid rgba(255,71,52,0.5);
+        transition: 1s;
+      }
+
+      .content {
+        width: 100%;
+        height: 100px;
+        background: rgba(black, 0.5);
+        transition: transform 300ms;
+        position: relative;
+      }
+
+      .wrapper:hover .content {
+        transform: translateY(-100px);
+        cursor: pointer;
+      }
+
+      .text_area {
+        color: #fff;
+        font-family: $workSans;
+        // font-weight: 200;
+        width: 100%;
+        // height: 40px;
+        // background: $blackPearl;
+        text-align: center;
+        padding-top: 10px;
+        position: absolute;
+        // margin-top: 100px;
+        font-size: 1.5em;
+        cursor: pointer;
+        display: none;
+      }
+
+      .wrapper:hover .text_area {
+        display: block;
+      }
+
+      .wrapper:hover img {
+        transform: scale(2,2) rotate(360deg);
+      }
+    }
+  }
+
+  //// Project Modal ////
+
+  .revealInfo {
+    width: 42%;
+    float: left;
+
+    h3 {
+      margin-bottom: 8%;
+      font-family: $workSans;
+      text-align: center;
+      color: $grayAztec;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .skillLabels {
+      margin-left: 4%;
+    }
+
+    hr {
+      width: 93%;
+      border-top: 1px solid $grayIron;
+    }
+
+    .projectLinks {
+      margin-top: 10%;
+      margin-left: 24%;
+
+      .liveDemo,
+      .sourceCode {
+        float: left;
+
+        .fa-2x {
+          margin-left: 30%;
+        }
+
+        a {
+          display: block;
+          color: $redOrange;  
+        }
+      }
+
+      .liveDemo {
+        margin-right: 12%;
+      }
+    }
+  }
+
+  .revealVideo {
+    margin-left: 1%;
+
+    .revealImg {
+      width: 54%;
+    }
+  }
+}
