@@ -18,6 +18,7 @@ $grayLight: #E6E6E6;
 $grayAztec: #161D1E;
 $grayIron: #CBCBCB;
 $whiteSmoke: #F6F6F6;
+$greenMalachite: #00DC70;
 
 
 // Porfolio Fonts //
@@ -470,6 +471,7 @@ body {
   .revealInfo {
     width: 42%;
     float: left;
+    margin-right: 1%;
 
     h3 {
       margin-bottom: 8%;
@@ -484,6 +486,10 @@ body {
 
     .skillLabels {
       margin-left: 4%;
+
+      h6 {
+        font-weight: bold;
+      }
     }
 
     hr {
@@ -505,7 +511,13 @@ body {
 
         a {
           display: block;
-          color: $redOrange;  
+          color: $redOrange; 
+          transition: 0.5s; 
+        }
+
+        a:hover {
+          color: $greenMalachite;
+          transition: 0.5s;
         }
       }
 
@@ -516,10 +528,11 @@ body {
   }
 
   .revealVideo {
-    margin-left: 1%;
+    margin-top: 2%;
 
     .revealImg {
       width: 54%;
+      border: 1px solid $grayLight;
     }
   }
 }
