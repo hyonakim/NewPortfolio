@@ -11,8 +11,9 @@
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
+    "browserify-shim": "^3.8.11",
     "chai": "^3.4.0",
-    "foundation-sites": "^5.5.3",
+    "foundation-sites": "^6.0.3",
     "gulp": "^3.9.0",
     "gulp-htmlhint": "^0.3.0",
     "gulp-jscs": "^3.0.1",
@@ -27,6 +28,7 @@
     "jshint-jsx": "^0.4.1",
     "jshint-stylish": "^2.0.1",
     "mocha": "^2.3.3",
+    "motion-ui": "^1.1.1",
     "node-bourbon": "^4.2.3",
     "node-font-awesome": "^1.0.2",
     "node-neat": "^1.7.2",
@@ -36,10 +38,28 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
+    "angular": "^1.4.8",
+    "angular-ui-router": "^0.2.15",
+    "browserify-shim": "^3.8.11",
     "font-awesome": "^4.4.0",
+    "foundation": "^4.2.1",
     "jquery": "^2.1.4",
     "moment": "^2.10.6",
+    "motion-ui": "^1.1.1",
     "normalize.css": "^3.0.3",
     "underscore": "^1.8.3"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "foundation": "./node_modules/foundation-sites/dist/foundation.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "foundation": "foundation"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   }
 }
