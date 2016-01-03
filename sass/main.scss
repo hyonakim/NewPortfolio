@@ -432,7 +432,7 @@ body {
     }
   }
 
-  h2 {
+  .projectHeader {
     color: $redOrange;
     padding-top: 5%;
     font-family: $workSans;
@@ -617,6 +617,99 @@ body {
     .revealImg {
       width: 54%;
       border: 1px solid $grayLight;
+    }
+  }
+
+/////////// Graphics Page View /////////////
+
+  .graphicBg {
+    position: relative;
+    height: 678px;
+    width: 100%;
+  }
+
+  a.graphicBread {
+    color: #fff;
+  }
+
+  .graphicHeader {
+    color: $redOrange;
+    background: black;
+    padding: 0 1%;
+    // padding-top: 5%;
+    font-family: $workSans;
+    font-weight: 200;
+    position: absolute;
+    top: 10%;
+    margin-left: 52.5%;
+    font-size: 6em;
+    animation: ScaleIn 1s ease-in;
+  }
+
+  @-webkit-keyframes ScaleIn {
+    from { opacity: 0;
+          transform: scale3d(.75, .75, 1); }
+    to { opacity: 1;
+          transform: scale3d(1, 1, 1); }
+  }
+
+  .graphicLogos {
+
+    .localize {
+      position: absolute;
+      top: 12%;
+      width: 42%;
+    }
+
+    .flashCard {
+      position: absolute;
+      left: 5%;
+      top: 35%;
+      width: 32%;
+    }
+
+    .flashDeck {
+      position: absolute;
+      top: 70%;
+      left: 20%;
+      width: 33%;
+    }
+
+    .glimpse {
+      position: absolute;
+      top: 35%;
+      right: 25%;
+      width: 30%;
+    }
+
+    .pawpals {
+      position: absolute;
+      top: 60%;
+      right: 12%;
+      width: 22%;
+    }
+
+    .localize:hover,
+    .flashCard:hover,
+    .flashDeck:hover,
+    .glimpse:hover,
+    .pawpals:hover {
+      animation: shake 1s infinite ease-in;
+      cursor: pointer;
+    }
+
+    @-webkit-keyframes shake {
+       0% { -webkit-transform:     translate(2px, 1px) rotate(0deg); }
+      10% { -webkit-transform:     translate(-1px, -2px) rotate(-2deg); }
+      20% { -webkit-transform:     translate(-3px, 0px) rotate(3deg); }
+      30% { -webkit-transform:     translate(0px, 2px) rotate(0deg); }
+      40% { -webkit-transform:     translate(1px, -1px) rotate(1deg); }
+      50% { -webkit-transform:     translate(-1px, 2px) rotate(-1deg); }
+      60% { -webkit-transform:     translate(-3px, 1px) rotate(0deg); }
+      70% { -webkit-transform:     translate(2px, 1px) rotate(-2deg); }
+      80% { -webkit-transform:     translate(-1px, -1px) rotate(4deg); }
+      90% { -webkit-transform:     translate(2px, 2px) rotate(0deg); }
+      100% { -webkit-transform:    translate(1px, -2px) rotate(-1deg); }
     }
   }
 }
