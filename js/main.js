@@ -1,6 +1,5 @@
 import angular from 'angular';
 
-// Import jQuery & Foundaiton
 import $ from 'jquery';
 import 'foundation';
 import 'motion-ui';

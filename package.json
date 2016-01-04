@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "angular": "^1.4.8",
+    "angular-scroll-animate": "^0.8.0",
     "angular-ui-router": "^0.2.15",
     "browserify-shim": "^3.8.11",
     "font-awesome": "^4.4.0",

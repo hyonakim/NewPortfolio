@@ -6178,6 +6178,13 @@ body {
       padding: 10px 20px;
       margin-right: 25px;
       border: 2px solid #FF4734; }
+  body #hkLogo {
+    width: 7%;
+    position: absolute;
+    top: 98%; }
+  body .animateHk {
+    transition: 1.5s ease-in-out;
+    transform: translate(35em, 0); }
   body .about {
     margin-top: 10%;
     width: 100%;

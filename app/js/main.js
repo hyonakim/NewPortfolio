@@ -84,12 +84,20 @@ Object.defineProperty(exports, '__esModule', {
 var HomeController = function HomeController($anchorScroll, $location) {
 
   var vm = this;
+  var $win = $(window);
 
   vm.scrollUp = scrollUp;
   vm.home = home;
   vm.about = about;
   vm.portfolio = portfolio;
   vm.contact = contact;
+
+  $win.scroll(function (event) {
+    var y = $(this).scrollTop();
+    if (y >= 190) {
+      $('#hkLogo').addClass('animateHk');
+    }
+  });
 
   function home() {
     $location.hash('home');
@@ -157,8 +165,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 var _angular = require('angular');
 
 var _angular2 = _interopRequireDefault(_angular);
-
-// Import jQuery & Foundaiton
 
 var _jquery = require('jquery');
 

@@ -2,6 +2,7 @@
 let HomeController = function($anchorScroll, $location) {
 
   let vm = this;
+  let $win = $(window);
 
   vm.scrollUp = scrollUp;
   vm.home = home;
@@ -9,6 +10,15 @@ let HomeController = function($anchorScroll, $location) {
   vm.portfolio = portfolio;
   vm.contact = contact;
 
+
+
+  $win.scroll(function(event) {
+    var y = $(this).scrollTop();
+    if(y >= 190) {
+      $('#hkLogo').addClass('animateHk');
+    }
+  });
+ 
   function home() {
     $location.hash('home');
     $anchorScroll();

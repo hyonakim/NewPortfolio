@@ -121,6 +121,17 @@ body {
 
 ///// About Section /////
 
+  #hkLogo {
+    width: 7%;
+    position: absolute;
+    top: 98%;
+  }
+  
+  .animateHk {
+    transition: 1.5s ease-in-out;
+    transform: translate(35em,0);
+  }
+
   .about {
     margin-top: 10%;
     width: 100%;
