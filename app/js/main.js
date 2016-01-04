@@ -97,6 +97,9 @@ var HomeController = function HomeController($anchorScroll, $location) {
     if (y >= 190) {
       $('#hkLogo').addClass('animateHk');
     }
+    if (y >= 400) {
+      $('#aboutMe').removeClass('.aboutMe').addClass('animateAbout');
+    }
   });
 
   function home() {
