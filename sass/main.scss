@@ -64,7 +64,7 @@ body {
   }
 
   .homeMenu {
-    position: fixed;
+    position: absolute;
     top: 3%;
     left: 420px;
 
@@ -121,13 +121,15 @@ body {
 
 ///// About Section /////
 
-  #hkLogo {
+  .hkLogo {
     width: 7%;
     position: absolute;
     top: 98%;
+    visibility: hidden;
   }
   
   .animateHk {
+    visibility: visible;
     transition: 2s ease-in-out;
     transform: translate(36em,0);
   }
@@ -206,7 +208,7 @@ body {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 195%;
+      top: 210%;
       margin-left: 7%;
 
       h5 {
@@ -242,17 +244,43 @@ body {
     }
 
     .myWorks {
-      margin-left: 18%;
+      // margin-left: 18%;
+      width: 100%;
 
-      .projects,
+      .projects {
+        visibility: hidden;
+        float: left;
+        margin-left: -20px;
+
+        small {
+          display: block;
+          margin-left: 30%;
+          color: #fff;
+        }
+      }
+
       .graphics {
+        visibility: hidden;
         float: left;  
+        margin-left: 30%;
 
         small {
           display: block;
           margin-left: 30%;
           color: #fff;
         } 
+      }
+
+      .animateProjects {
+        visibility: visible;
+        transition: 1.5s ease-in-out;
+        transform: translate(16em,0);
+      }
+
+      .animateGraphics {
+        visibility: visible;
+        transition: 1.5s ease-in-out;
+        transform: translate(-9em,0);
       }
 
       .projects img:hover,

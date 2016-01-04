@@ -6144,7 +6144,7 @@ body {
   100% {
     transform: rotate(360deg); } }
   body .homeMenu {
-    position: fixed;
+    position: absolute;
     top: 3%;
     left: 420px; }
     body .homeMenu li {
@@ -6178,11 +6178,13 @@ body {
       padding: 10px 20px;
       margin-right: 25px;
       border: 2px solid #FF4734; }
-  body #hkLogo {
+  body .hkLogo {
     width: 7%;
     position: absolute;
-    top: 98%; }
+    top: 98%;
+    visibility: hidden; }
   body .animateHk {
+    visibility: visible;
     transition: 2s ease-in-out;
     transform: translate(36em, 0); }
   body .aboutMe {
@@ -6240,7 +6242,7 @@ body {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 195%;
+      top: 210%;
       margin-left: 7%; }
       body .about .skills h5 {
         margin-left: 7%;
@@ -6262,15 +6264,31 @@ body {
       color: #fff;
       padding-top: 8%; }
     body .portfolio .myWorks {
-      margin-left: 18%; }
-      body .portfolio .myWorks .projects,
+      width: 100%; }
+      body .portfolio .myWorks .projects {
+        visibility: hidden;
+        float: left;
+        margin-left: -20px; }
+        body .portfolio .myWorks .projects small {
+          display: block;
+          margin-left: 30%;
+          color: #fff; }
       body .portfolio .myWorks .graphics {
-        float: left; }
-        body .portfolio .myWorks .projects small,
+        visibility: hidden;
+        float: left;
+        margin-left: 30%; }
         body .portfolio .myWorks .graphics small {
           display: block;
           margin-left: 30%;
           color: #fff; }
+      body .portfolio .myWorks .animateProjects {
+        visibility: visible;
+        transition: 1.5s ease-in-out;
+        transform: translate(16em, 0); }
+      body .portfolio .myWorks .animateGraphics {
+        visibility: visible;
+        transition: 1.5s ease-in-out;
+        transform: translate(-9em, 0); }
       body .portfolio .myWorks .projects img:hover,
       body .portfolio .myWorks .graphics img:hover {
         transform: rotateY(360deg);

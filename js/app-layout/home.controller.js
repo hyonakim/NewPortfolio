@@ -15,10 +15,14 @@ let HomeController = function($anchorScroll, $location) {
   $win.scroll(function(event) {
     var y = $(this).scrollTop();
     if(y >= 190) {
-      $('#hkLogo').addClass('animateHk');
+      $('#hkLogo').removeClass('.hkLogo').addClass('animateHk');
     }
     if(y >= 400) {
       $('#aboutMe').removeClass('.aboutMe').addClass('animateAbout');
+    }
+    if(y >= 1770) {
+      $('#projects').removeClass('.projects').addClass('animateProjects');
+      $('#graphics').removeClass('.graphics').addClass('animateGraphics');
     }
   });
  
@@ -30,7 +34,7 @@ let HomeController = function($anchorScroll, $location) {
   function about() {
     $location.hash('about');
     $anchorScroll();
-    $anchorScroll.yOffset = 54;
+    $anchorScroll.yOffset = 175;
   }
 
   function portfolio() {
