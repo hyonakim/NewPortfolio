@@ -1,13 +1,13 @@
 <!-- Landing Page  -->
-  <nav class='topNav'>
-    <img src="/images/laptopbg.png" class='homeBg'>
+  <nav class='topNav' id='home'>
+    <img src="/images/laptopbg.png" class='homeBg' id='top'>
     <a href="/#"><img ng-src='/images/mylogowhite.png' class='logo'></a>
 
-      <ul class='menu homeMenu' data-magellan>
-        <li><a href='#first'>Home</a></li>
-        <li><a href=''>About</a></li>
-        <li><a href=''>Portfolio</a></li>
-        <li><a href=''>Contact</a></li>
+      <ul class='menu homeMenu'>
+        <li ng-click='vm.home()'>Home</li>
+        <li ng-click='vm.about()'>About</li>
+        <li ng-click='vm.portfolio()'>Portfolio</li>
+        <li ng-click='vm.contact()'>Contact</li>
       </ul>
 
     <section class='social'>
@@ -26,7 +26,7 @@
   </section>
 
 <!-- About Section -->
-  <section class='about'>
+  <section class='about' id='about'>
     <div class='myPicDiv'>
       <img ng-src='../images/bwme.png' class='myPic'>
     </div>
@@ -64,7 +64,7 @@
 
 
   <!-- My Portfolio Section -->
-  <section class='portfolio' id='first' data-magellan-target='first'>
+  <section class='portfolio' id='portfolio'>
     <h3>Portfolio</h3>
     <div class='myWorks'>
       <div class='projects'>
@@ -84,7 +84,7 @@
     
   </section>
 
-  <section class="contact">
+  <section class="contact" id='contact'>
     <div class="contactForm">
       <h3>Contact Me</h3>
       <form action="//formspree.io/hyona@hyonakim.com"
@@ -123,7 +123,7 @@
     </div>
     <div class="copyright">
       <p>Copyright &copy;2016 - Hyona Kim</p>
-      <a href="#" id="scrollToTop"><img ng-src='../images/uptop.png'></a>
+      <img ng-src='../images/uptop.png' ng-click='vm.scrollUp()'>
     </div>
   </footer>
 

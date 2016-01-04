@@ -13,15 +13,18 @@ var config = function config($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/app-layout/layout.tpl.html'
   }).state('root.home', {
     url: '/',
+    controller: 'HomeController as vm',
     templateUrl: 'templates/app-layout/home.tpl.html'
   }).state('root.about', {
     url: '/about',
     templateUrl: 'templates/app-layout/about.tpl.html'
   }).state('root.projects', {
     url: '/projects',
+    controller: 'ProjectsController as vm',
     templateUrl: 'templates/app-layout/projects.tpl.html'
   }).state('root.graphics', {
     url: '/graphics',
+    controller: 'GraphicsController as vm',
     templateUrl: 'templates/app-layout/graphics.tpl.html'
   });
 };
@@ -48,24 +51,105 @@ var _config2 = _interopRequireDefault(_config);
 
 _angular2['default'].module('app.core', ['ui.router']).config(_config2['default']);
 
-},{"./config":1,"angular":7,"angular-ui-router":5}],3:[function(require,module,exports){
+},{"./config":1,"angular":9,"angular-ui-router":7}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+var GraphicsController = function GraphicsController($scope, $state) {
+
+  var vm = this;
+
+  vm.goHome = goHome;
+
+  function goHome() {
+    $state.go('root.home');
+    location.reload();
+  }
+};
+
+GraphicsController.$inject = ['$scope', '$state'];
+
+exports['default'] = GraphicsController;
+module.exports = exports['default'];
+
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var HomeController = function HomeController($anchorScroll, $location, $scope) {
+var HomeController = function HomeController($anchorScroll, $location) {
 
-  $(document).foundation();
+  var vm = this;
+
+  vm.scrollUp = scrollUp;
+  vm.home = home;
+  vm.about = about;
+  vm.portfolio = portfolio;
+  vm.contact = contact;
+
+  function home() {
+    $location.hash('home');
+    $anchorScroll();
+  }
+
+  function about() {
+    $location.hash('about');
+    $anchorScroll();
+    $anchorScroll.yOffset = 54;
+  }
+
+  function portfolio() {
+    $location.hash('portfolio');
+    $anchorScroll();
+    $anchorScroll.yOffset = -11;
+  }
+
+  function contact() {
+    $location.hash('contact');
+    $anchorScroll();
+    $anchorScroll.yOffset = 50;
+  }
+
+  /**** Scroll to Top from Bottom ****/
+  function scrollUp() {
+    $location.hash('top');
+    $anchorScroll();
+  }
 };
 
-HomeController.$inject = ['$anchorScroll', '$location', '$scope'];
+HomeController.$inject = ['$anchorScroll', '$location'];
 
 exports['default'] = HomeController;
 module.exports = exports['default'];
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+var ProjectsController = function ProjectsController($scope, $state) {
+
+  var vm = this;
+
+  vm.goHome = goHome;
+
+  function goHome() {
+    $state.go('root.home');
+    location.reload();
+  }
+};
+
+ProjectsController.$inject = ['$scope', '$state'];
+
+exports['default'] = ProjectsController;
+module.exports = exports['default'];
+
+},{}],6:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -96,15 +180,23 @@ var _appLayoutHomeController = require('./app-layout/home.controller');
 
 var _appLayoutHomeController2 = _interopRequireDefault(_appLayoutHomeController);
 
+var _appLayoutProjectsController = require('./app-layout/projects.controller');
+
+var _appLayoutProjectsController2 = _interopRequireDefault(_appLayoutProjectsController);
+
+var _appLayoutGraphicsController = require('./app-layout/graphics.controller');
+
+var _appLayoutGraphicsController2 = _interopRequireDefault(_appLayoutGraphicsController);
+
 // Set up a run block on an angular module to help with
 // loading foundation after templates load
 (0, _jquery2['default'])(document).foundation();_angular2['default'].module('app', ['app.core']).run(function ($rootScope) {
   $rootScope.$on('$viewContentLoaded', function (event, data) {
     (0, _jquery2['default'])(document).foundation();
   });
-}).controller('HomeController', _appLayoutHomeController2['default']);
+}).controller('HomeController', _appLayoutHomeController2['default']).controller('ProjectsController', _appLayoutProjectsController2['default']).controller('GraphicsController', _appLayoutGraphicsController2['default']);
 
-},{"./app-core/index":2,"./app-layout/home.controller":3,"angular":7,"foundation":8,"jquery":9,"motion-ui":10}],5:[function(require,module,exports){
+},{"./app-core/index":2,"./app-layout/graphics.controller":3,"./app-layout/home.controller":4,"./app-layout/projects.controller":5,"angular":9,"foundation":10,"jquery":11,"motion-ui":12}],7:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.15
@@ -4475,7 +4567,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.8
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -33494,11 +33586,11 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":6}],8:[function(require,module,exports){
+},{"./angular":8}],10:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 !function($) {
@@ -41201,7 +41293,7 @@ Foundation.plugin(ResponsiveToggle, 'ResponsiveToggle');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],9:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -50421,7 +50513,7 @@ return jQuery;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 ;(function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
@@ -50540,7 +50632,7 @@ var MotionUI = {
 return MotionUI;
 }));
 
-},{"jquery":9}]},{},[4])
+},{"jquery":11}]},{},[6])
 
 
 //# sourceMappingURL=main.js.map

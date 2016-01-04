@@ -14,6 +14,8 @@ import './app-core/index';
 
 // Controllers
 import HomeController from './app-layout/home.controller';
+import ProjectsController from './app-layout/projects.controller';
+import GraphicsController from './app-layout/graphics.controller';
 
 // Set up a run block on an angular module to help with
 // loading foundation after templates load
@@ -25,4 +27,6 @@ angular
     });
   })
   .controller('HomeController', HomeController)
+  .controller('ProjectsController', ProjectsController)
+  .controller('GraphicsController', GraphicsController)
 ;

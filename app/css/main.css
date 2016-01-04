@@ -6144,13 +6144,14 @@ body {
   100% {
     transform: rotate(360deg); } }
   body .homeMenu {
-    position: absolute;
+    position: fixed;
     top: 3%;
     left: 420px; }
-    body .homeMenu li a {
+    body .homeMenu li {
       color: #fff;
-      margin-right: 25px; }
-    body .homeMenu li a:hover {
+      padding-top: 5%;
+      padding-right: 35% !important; }
+    body .homeMenu li:hover {
       text-decoration: underline; }
   body .social {
     position: absolute;

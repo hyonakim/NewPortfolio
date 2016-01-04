@@ -9,6 +9,7 @@ let config = function($stateProvider, $urlRouterProvider) {
     })
     .state('root.home', {
       url: '/',
+      controller: 'HomeController as vm',
       templateUrl: 'templates/app-layout/home.tpl.html'
     })
     .state('root.about', {
@@ -17,10 +18,12 @@ let config = function($stateProvider, $urlRouterProvider) {
     })
     .state('root.projects', {
       url: '/projects',
+      controller: 'ProjectsController as vm',
       templateUrl: 'templates/app-layout/projects.tpl.html'
     })
     .state('root.graphics', {
       url: '/graphics',
+      controller: 'GraphicsController as vm',
       templateUrl: 'templates/app-layout/graphics.tpl.html'
     });
 

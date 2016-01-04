@@ -64,16 +64,17 @@ body {
   }
 
   .homeMenu {
-  position: absolute;
-  top: 3%;
-  left: 420px;
+    position: fixed;
+    top: 3%;
+    left: 420px;
 
-    li a {
+    li {
       color: #fff;
-      margin-right: 25px;
+      padding-top: 5%;
+      padding-right: 35% !important;
     }
 
-    li a:hover {
+    li:hover {
       text-decoration: underline;
     }
   }
