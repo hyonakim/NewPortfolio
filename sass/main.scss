@@ -30,6 +30,59 @@ $workSans: 'Work Sans', sans-serif;
 body {
   background: $whiteSmoke;
 
+///// Sticky Navigation /////
+
+  .stickyNav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    z-index: 1;
+    visibility: hidden;
+
+    .stickyLogo {
+      width: 5%;
+      float: left;
+    }
+
+    .stickyMenu {
+      margin-left: 40%;
+      padding-top: 2%;
+
+      li {
+        padding-right: 18%;
+        color: $redOrange;
+        // transition: 1s;
+      }
+
+      li:hover {
+        color: $grayAztec;
+        cursor: pointer;
+        transition: 1s;
+      }
+    }
+
+    .stickySocial {
+      padding-top: 1%;
+
+      .fa:hover {
+        color: $grayIron;
+      }
+    }
+  }
+
+  .dropSticky {
+    visibility: visible;
+    animation: ScaleIn 1s ease-in;
+  }
+
+  @-webkit-keyframes ScaleIn {
+    from { opacity: 0;
+          transform: scale3d(.75, .75, 1); }
+    to { opacity: 1;
+          transform: scale3d(1, 1, 1); }
+  }
+
+
 ///// Landing Page /////
   
   .homeBg {
@@ -107,13 +160,11 @@ body {
     .homeBtns {
       position: absolute;
       top: 440px;
-      left: 490px;
+      left: 560px;
 
-      .contactBtn,
-      .portfolioBtn {
+      .contactBtn {
         color: #fff;
         padding: 10px 20px;
-        margin-right: 25px;
         border: 2px solid $redOrange;
       }
     }
@@ -135,7 +186,7 @@ body {
   }
 
   .aboutMe {
-    margin-top: 10%;
+    margin-top: 18%;
     text-align: center;
     visibility: hidden;
   }
@@ -211,9 +262,17 @@ body {
       top: 210%;
       margin-left: 7%;
 
-      h5 {
+      .skillHeader {
         margin-left: 7%;
         font-weight: bold;
+        visibility: hidden;
+      }
+
+      .animateSkills {
+        visibility: visible;
+        transform: rotateX(360deg);
+        transform-style: preserve-3d;
+        transition: all 1.5s linear;
       }
 
       img {
@@ -232,7 +291,7 @@ body {
 ///// Portfolio Section /////
 
   .portfolio {
-    margin-top: 40%;
+    margin-top: 30%;
     width: 100%;
     height: 688px;
     background: url('../images/citybg.png');
@@ -274,13 +333,13 @@ body {
       .animateProjects {
         visibility: visible;
         transition: 1.5s ease-in-out;
-        transform: translate(16em,0);
+        transform: translate(15em,0);
       }
 
       .animateGraphics {
         visibility: visible;
         transition: 1.5s ease-in-out;
-        transform: translate(-9em,0);
+        transform: translate(-8em,0);
       }
 
       .projects img:hover,
@@ -290,6 +349,20 @@ body {
         transition: all 1.5s linear;
       }
     }
+  }
+
+  .hkLogoBtm {
+    width: 7%;
+    position: absolute;
+    top: 360%;
+    right: 0%;
+    visibility: hidden;
+  }
+
+  .animateLogoBtm {
+    visibility: visible;
+    transition: 1.5s ease-in-out;
+    transform: translate(-38em,0);
   }
 
 ///// Contact Section /////  
@@ -435,7 +508,7 @@ body {
       img {
         width: 6%;
         position: absolute;
-        top: 3220px;
+        top: 3240px;
         left: 94%;
       }
 
@@ -452,43 +525,19 @@ body {
     position: relative;
     height: 678px;
     width: 100%;
-    // -webkit-animation: fadeAndScale 1.5s ease-in; /* Safari 5, Chrome */
-    // -moz-transform: fadeAndScale 1.5s ease-in; /* Firefox 5-15 */
-    // -o-transform: fadeAndScale 1.5s ease-in; /* Opera 12+ */
-    // transform: fadeAndScale 1.5s ease-in; /* Safari 5, Chrome, Firefox 16+ */
   }
-  // @-webkit-keyframes fadeAndScale {
-  //   from { opacity: 0;
-  //         transform: scale3d(.75, .75, 1); }
-  //   to { opacity: 1;
-  //         transform: scale3d(1, 1, 1); }
-  // }
-  // @-moz-keyframes fadeAndScale {
-  //   from { opacity: 0;
-  //         transform: scale3d(.75, .75, 1); }
-  //   to { opacity: 1;
-  //         transform: scale3d(1, 1, 1); }
-  // }
-  // @-o-keyframes fadeAndScale {
-  //   from { opacity: 0;
-  //         transform: scale3d(.75, .75, 1); }
-  //   to { opacity: 1;
-  //         transform: scale3d(1, 1, 1); }
-  // }
-  // @keyframes fadeAndScale {
-  //   from { opacity: 0;
-  //         transform: scale3d(.75, .75, 1); }
-  //   to { opacity: 1;
-  //         transform: scale3d(1, 1, 1); }
-  // }
 
   .bread {
     position: absolute;
     top: 2%;
     margin-left: 1%;
 
-    a {
+    .projectBread {
       color: $redOrange;
+    }
+
+    .projectBread:hover {
+      cursor: pointer;
     }
   }
 
@@ -688,8 +737,12 @@ body {
     width: 100%;
   }
 
-  a.graphicBread {
+  .graphicBread {
     color: #fff;
+  }
+
+  .graphicBread:hover {
+    cursor: pointer;
   }
 
   .graphicHeader {
@@ -772,4 +825,6 @@ body {
       100% { -webkit-transform:    translate(1px, -2px) rotate(-1deg); }
     }
   }
+
+
 }

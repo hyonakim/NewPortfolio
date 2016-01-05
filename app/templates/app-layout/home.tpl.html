@@ -1,3 +1,21 @@
+<!-- Sticky Navigation -->
+  <nav class='stickyNav' id='stickyNav'>
+    <a href="/#"><img ng-src='/images/mylogo.png' class='stickyLogo'></a>
+
+      <ul class='menu stickyMenu'>
+        <li ng-click='vm.home()'>Home</li>
+        <li ng-click='vm.about()'>About</li>
+        <li ng-click='vm.portfolio()'>Portfolio</li>
+        <li ng-click='vm.contact()'>Contact</li>
+      </ul>
+
+    <section class='social stickySocial'>
+      <a href='https://twitter.com/TekkieNinja' target='_blank'><i class="fa fa-twitter fa-2x"></i></a>
+      <a href='https://github.com/hyonakim' target='_blank'<i class="fa fa-github-alt fa-2x"></i></a>
+      <a href='https://medium.com/@hyonakim' target='_blank'<i class="fa fa-medium fa-2x"></i></a>
+    </section>
+  </nav>
+
 <!-- Landing Page  -->
   <nav class='topNav' id='home'>
     <img src="/images/laptopbg.png" class='homeBg' id='top'>
@@ -20,8 +38,7 @@
   <section class='container'>
     <img src='/images/myname.png' class='myName'>
     <div class='homeBtns'>
-      <button class='alert hollow button contactBtn'>Get in Touch</button>
-      <button class='alert hollow button portfolioBtn'>Portfolio</button>
+      <button class='alert hollow button contactBtn' ng-click='vm.getInTouch()'>Get in Touch</button>
     </div>
   </section>
 
@@ -44,7 +61,7 @@
       </p>
     </div>
     <div class="skills">
-      <h5>My skills</h5>
+      <h5 id='mySkills' class='skillHeader'>My skills</h5>
       <div class="first">
         <img ng-src='../images/html5.png' alt='html5'>
         <img ng-src='../images/css3.png' alt='css3'>
@@ -84,10 +101,10 @@
         </a>
         <small>Logos created for projects</small>
       </div>
-    </div>
-
-    
+    </div>  
   </section>
+
+  <img ng-src='../images/hk.png' id='hkLogoBtm' class='hkLogoBtm'>
 
   <section class="contact" id='contact'>
     <div class="contactForm">
@@ -106,7 +123,7 @@
   <footer>
     <div class="footerInfo">
       <div class="contactMe">
-        <h5>Get in touch</h5>
+        <h5 id='getInTouch'>Get in touch</h5>
         <hr>
         <p>404 993 7436</p>
         <p><a href='#'>hyona@hyonakim.com</a></p>
