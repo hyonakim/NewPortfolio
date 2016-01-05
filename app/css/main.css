@@ -6297,10 +6297,22 @@ body {
     width: 100%;
     height: 688px;
     background: url("../images/citybg.png"); }
-    body .portfolio h3 {
+    body .portfolio .portfolioHeader {
       text-align: center;
       color: #fff;
-      padding-top: 8%; }
+      padding-top: 8%;
+      visibility: hidden; }
+    body .portfolio .animatePortHeader {
+      visibility: visible;
+      animation: ScaleIn 1s ease-in; }
+
+@-webkit-keyframes ScaleIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
     body .portfolio .myWorks {
       width: 100%; }
       body .portfolio .myWorks .projects {
@@ -6341,7 +6353,7 @@ body {
   body .animateLogoBtm {
     visibility: visible;
     transition: 1.5s ease-in-out;
-    transform: translate(-38em, 0); }
+    transform: translate(-37em, 0); }
   body .contact {
     margin-top: 10%;
     margin-bottom: 5%; }

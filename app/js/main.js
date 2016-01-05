@@ -110,7 +110,10 @@ var HomeController = function HomeController($anchorScroll, $location) {
     if (y >= 900) {
       $('#mySkills').removeClass('.skillHeader').addClass('animateSkills');
     }
-    if (y >= 1760) {
+    if (y >= 1400) {
+      $('#portfolioHeader').removeClass('.portfolioHeader').addClass('animatePortHeader');
+    }
+    if (y >= 1560) {
       $('#projects').removeClass('.projects').addClass('animateProjects');
       $('#graphics').removeClass('.graphics').addClass('animateGraphics');
     }
