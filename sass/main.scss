@@ -45,12 +45,14 @@ body {
     }
 
     .stickyMenu {
-      margin-left: 35%;
+      margin-left: 33%;
       padding-top: 2%;
 
       li {
-        padding-right: 18%;
+        padding-right: 16%;
         color: $redOrange;
+        font-family: $workSans;
+        font-size: 1.1em;
         // transition: 1s;
       }
 
@@ -119,7 +121,7 @@ body {
   .homeMenu {
     position: absolute;
     top: 3%;
-    left: 35%;
+    left: 37%;
     width: 30%;
 
     li {
@@ -132,6 +134,7 @@ body {
 
     li:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 
@@ -192,6 +195,7 @@ body {
     font-family: $workSans;
     font-weight: 200;
     font-size: 3em;
+    color: $redOrange;
     margin-top: 18%;
     text-align: center;
     visibility: hidden;
@@ -402,6 +406,7 @@ body {
         font-family: $workSans;
         font-weight: 200;
         font-size: 3em;
+        color: $redOrange;
         text-align: center;
         margin-bottom: 5%;
       }
