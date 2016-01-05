@@ -6180,11 +6180,14 @@ body {
   body .homeMenu {
     position: absolute;
     top: 3%;
-    left: 420px; }
+    left: 35%;
+    width: 30%; }
     body .homeMenu li {
+      list-style: none;
+      float: left;
       color: #fff;
       padding-top: 5%;
-      padding-right: 18% !important; }
+      padding-right: 10% !important; }
     body .homeMenu li:hover {
       text-decoration: underline; }
   body .social {
