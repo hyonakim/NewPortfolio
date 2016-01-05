@@ -6114,7 +6114,7 @@ body {
       width: 5%;
       float: left; }
     body .stickyNav .stickyMenu {
-      margin-left: 40%;
+      margin-left: 35%;
       padding-top: 2%; }
       body .stickyNav .stickyMenu li {
         padding-right: 18%;
@@ -6184,7 +6184,7 @@ body {
     body .homeMenu li {
       color: #fff;
       padding-top: 5%;
-      padding-right: 35% !important; }
+      padding-right: 18% !important; }
     body .homeMenu li:hover {
       text-decoration: underline; }
   body .social {
@@ -6220,6 +6220,9 @@ body {
     transition: 2s ease-in-out;
     transform: translate(36em, 0); }
   body .aboutMe {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 200;
+    font-size: 3em;
     margin-top: 18%;
     text-align: center;
     visibility: hidden; }
@@ -6260,7 +6263,7 @@ body {
       background: #fff;
       position: absolute;
       left: 38%;
-      top: 140%;
+      top: 145%;
       z-index: -999; }
       body .about .bioBlock .para1 {
         padding: 5%; }
@@ -6274,7 +6277,7 @@ body {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 210%;
+      top: 212%;
       margin-left: 7%; }
       body .about .skills .skillHeader {
         margin-left: 7%;
@@ -6298,6 +6301,9 @@ body {
     height: 688px;
     background: url("../images/citybg.png"); }
     body .portfolio .portfolioHeader {
+      font-family: "Work Sans", sans-serif;
+      font-weight: 200;
+      font-size: 3em;
       text-align: center;
       color: #fff;
       padding-top: 8%;
@@ -6347,7 +6353,7 @@ body {
   body .hkLogoBtm {
     width: 7%;
     position: absolute;
-    top: 360%;
+    top: 363%;
     right: 0%;
     visibility: hidden; }
   body .animateLogoBtm {
@@ -6361,6 +6367,9 @@ body {
       width: 80%;
       margin-left: 10%; }
       body .contact .contactForm h3 {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 200;
+        font-size: 3em;
         text-align: center;
         margin-bottom: 5%; }
       body .contact .contactForm .input1 {
@@ -6398,15 +6407,18 @@ body {
           color: #FF4734; }
         body footer .footerInfo .contactMe h5 {
           color: #fff;
+          font-family: "Work Sans", sans-serif;
+          font-weight: 200;
           border: none;
           border-radius: 5px;
-          width: 75%; }
+          width: 77%; }
         body footer .footerInfo .contactMe hr {
           margin-top: 0;
           border: 0;
           border-top: 1px solid #FF4734; }
         body footer .footerInfo .contactMe p {
           color: #fff;
+          font-family: "Work Sans", sans-serif;
           margin: 0 auto; }
       body footer .footerInfo .socialFooter {
         display: flex;
@@ -6426,6 +6438,8 @@ body {
         body footer .footerInfo .socialFooter .followMe {
           width: 60%;
           color: #fff;
+          font-family: "Work Sans", sans-serif;
+          font-weight: 200;
           text-align: center;
           margin-left: 12%;
           margin-top: 4%; }
@@ -6439,12 +6453,13 @@ body {
       background: #161D1E; }
       body footer .copyright p {
         color: #fff;
+        font-family: "Work Sans", sans-serif;
         text-align: center;
         padding-top: 2%; }
       body footer .copyright img {
         width: 6%;
         position: absolute;
-        top: 3240px;
+        top: 3285px;
         left: 94%; }
       body footer .copyright img:hover {
         border: 1px solid #FF4734;
