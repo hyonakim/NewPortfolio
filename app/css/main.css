@@ -6502,7 +6502,7 @@ body {
     margin-top: -10px; } }
   body .outer .workGallery {
     position: absolute;
-    top: 80%;
+    top: 60%;
     height: 100px;
     margin-left: 6%;
     -webkit-animation: fadeAndScale 1.5s ease-in;
@@ -6525,6 +6525,8 @@ body {
         width: 100%;
         height: 100%;
         transition: transform 800ms; }
+    body .outer .workGallery .row2 {
+      margin-left: 19%; }
     body .outer .workGallery .wrapper:hover {
       border: 5px solid rgba(255, 71, 52, 0.5);
       transition: 1s; }

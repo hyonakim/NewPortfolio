@@ -600,7 +600,7 @@ body {
 
     .workGallery {
       position: absolute;
-      top: 80%;
+      top: 60%;
       height: 100px;
       margin-left: 6%;
       -webkit-animation: fadeAndScale 1.5s ease-in; /* Safari 5, Chrome */
@@ -622,6 +622,10 @@ body {
           height: 100%;
           transition: transform 800ms;
         }
+      }
+
+      .row2 {
+        margin-left: 19%;
       }
 
       .wrapper:hover {
