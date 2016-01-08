@@ -1,7 +1,7 @@
 ## My Portfolio
 
 > This is my portfolio with some of my recent projects. 
-> Deployment hyonakim.com
+> Deployment http://hyonakim.com
 
 ## Tools Used
 - HTML5
