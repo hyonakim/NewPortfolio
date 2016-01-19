@@ -6546,17 +6546,18 @@ body {
           position: absolute;
           top: 298%;
           width: 100%;
-          margin-left: 33%; }
+          margin-left: 0; }
           body .portfolio .myWorks .graphics small {
             display: block;
             margin-left: 27%;
             color: #fff; }
         body .portfolio .myWorks .animateProjects {
           visibility: visible;
-          transition: 1.5s ease-in-out; }
+          transition: none; }
         body .portfolio .myWorks .animateGraphics {
           visibility: visible;
-          transition: 1.5s ease-in-out; }
+          transition: none;
+          transform: translate(0em, 0); }
         body .portfolio .myWorks .projects img:hover,
         body .portfolio .myWorks .graphics img:hover {
           transform: rotateY(360deg);
